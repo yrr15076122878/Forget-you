@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh_cn" lang="zh_cn">
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="language" content="zh_cn" />
+		<meta name="renderer" content="webkit" />
+		<meta name="keywords" content="" />
+		<meta name="viewport" content="width=640, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/Navigation.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.css" />
+		<link rel="stylesheet" href="http://www.wnevc.org.cn/css/bootstrap.min.css">
+		<script src="js/jquery-3.3.1.js"></script>
+		<script src="http://www.wnevc.org.cn/js/bootstrap.min.js"></script>
+		<title>SMC-大会议程</title>
+	</head>
+
+	<body class="action--site-news controller--site">
+		<a class="a-b-link" href="https://www.bagevent.com/event/1572502">&nbsp;</a>
+		<div class="container" id="page">
+			<form method="post" action="program" id="form1">
+				<div class="pageinner">
+					<div class="inside_content">
+						<div class="inside_right">
+							<div class="inside_right_title">大会议程</div>
+							<div class="news_wrap">
+								<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+								<style type="text/css">
+									/* 弹出层 */
+									
+									.big-link {
+										text-decoration: none;
+										background-color: #f7f7f7;
+										border-radius: 10px;
+										width: 16%;
+										height: 13rem;
+										padding-bottom: 5px;
+										display: block;
+										float: left;
+										margin: 2%;
+										overflow: hidden;
+										cursor: pointer;
+									}
+									
+									.big-link,
+									.big-link:hover {
+										text-decoration: none;
+										color: #333;
+									}
+									
+									.big-link img {
+										width: 100%;
+										display: block;
+										border-radius: 5px;
+									}
+									
+									.big-link p {
+										margin: 5px auto;
+										text-align: center;
+										width: 100%;
+									}
+									
+									.big-link p:last-child,
+									.font_normal {
+										font-weight: normal;
+									}
+									
+									.modal-header {
+										border-bottom: none;
+										padding: 0;
+										padding-right: 1rem;
+									}
+									
+									.modal-body p:first-child {
+										text-align: center;
+										font-size: 20px;
+									}
+									/* 媒体查询 */
+									
+									@media only screen and (max-width:576px) {
+										.big-link {
+											border-radius: 5px;
+											width: 46%;
+											height: 10rem;
+											padding-bottom: 2px;
+											margin: 2%;
+											font-size: 14px;
+										}
+										.big-link img {
+											width: 100%;
+											display: block;
+											border-radius: 5px;
+										}
+										.big-link p:last-child {
+											margin-top: 5%;
+											margin-bottom: 0;
+											line-height: 1.2;
+										}
+									}
+									/* 页面设置 */
+									
+									.line_h {
+										margin-bottom: 30px;
+										margin-top: 0;
+									}
+									
+									.line_h:last-child {
+										margin-bottom: 0;
+										margin-top: 30px;
+									}
+									
+									#title_tab {
+										width: 100%;
+										overflow: hidden;
+										margin-bottom: 10px;
+										display: flex;
+										justify-content: space-around;
+										flex-direction: row;
+										flex-wrap: wrap;
+									}
+									
+									#content_tab {
+										width: 100%;
+									}
+									
+									#title_tab>div {
+										display: flex;
+										width: 30%;
+										justify-content: space-around;
+										cursor: pointer;
+										border-radius: 5px;
+										color: #FFFFFF;
+										background-color: #129693;
+										padding: 10px 0;
+										font-weight: 900;
+									}
+									
+									#title_tab>.title_tab_active {
+										background-color: #19d2cc;
+									}
+									
+									#content_tab>div {
+										width: 100%;
+										left: 0;
+										top: 0;
+										min-height: 250px;
+										display: none;
+									}
+									
+									#content_tab>div:nth-child(1) {
+										display: block;
+									}
+									
+									.pull-div {
+										padding-bottom: 20px;
+									}
+									
+									.pull-cont {
+										display: none;
+										background: #FFFFFF;
+										padding: 10px;
+										line-height: 25px;
+									}
+									
+									.pull-tit {
+										position: relative;
+										width: 90%;
+										border-bottom: 1px dashed #333333;
+										cursor: pointer;
+									}
+									
+									.pull-tit span {
+										position: absolute;
+										top: 15px;
+										right: 15px;
+										display: block;
+										width: 0;
+										height: 0;
+										border-width: 8px 8px 0;
+										border-style: solid;
+										border-color: #333 transparent transparent;
+										transition: all 1s linear;
+									}
+									
+									.pull-tit .span-active {
+										transform: rotateX(180deg);
+									}
+									
+									.noblod {
+										font-weight: normal;
+									}
+									
+									#title_tabs {
+										width: 100%;
+										overflow: hidden;
+										margin-bottom: 10px;
+										display: flex;
+										justify-content: space-around;
+										flex-direction: row;
+										flex-wrap: wrap;
+										margin-bottom: 20px
+									}
+									
+									#title_tabs>div {
+										display: flex;
+										width: 40%;
+										justify-content: space-around;
+										cursor: pointer;
+										border-radius: 5px;
+										color: #FFFFFF;
+										background-color: #129693;
+										padding: 10px 0;
+										font-weight: 900;
+									}
+									
+									@media only screen and (max-width:768px) {
+										#title_tabs .index-cy-attend {
+											width: 60%;
+											float: left;
+											padding: 2% 0;
+											margin-top: 2%;
+											font-size: 14px;
+										}
+									}
+								</style>
+
+								<div class="inside_content">
+									<div class="inside_right">
+										<div class="news_wrap">
+											<div id="title_tabs">
+												<div class="index-cy-attend" style="background-color: rgb(192,0,0);">
+													<a href="http://m.wnevc.com" target="_blank" style="text-decoration: none;color: white;width: 100%;text-align: center;">我要报名参会</a>
+												</div>
+												<div class="index-cy-attend" style="background-color: rgb(192,0,0);">
+													<a href="http://www.wnevc.org.cn/home.aspx/conference/speakerinformation" style="text-decoration: none;color: white;width: 100%;text-align: center;">点击此处查看演讲嘉宾详情</a>
+												</div>
+											</div>
+
+											<div id="title_tab">
+												<div class="">7月1日</div>
+												<div class="title_tab_active">7月2日</div>
+												<div class="">7月3日</div>
+											</div>
+											<div id="content_tab">
+												<div class="div-tab" style="display: none;">
+													
+												</div>
+												<div class="div-tab" style="display: block;">
+													<table border="0" cellpadding="0" cellspacing="6" style="font-weight: bold;" width="100%">
+														<tbody>
+															<tr>
+																<td style="padding: 15px; background-color: #129693; color: #FFFFFF;">7月2日 | 周二
+																</td>
+															</tr>
+															<tr>
+																<td style="background-color: #d5f3f7; padding: 15px; color: #333333; line-height: 40px;">
+																	08:30-17:30
+																	<br> 先进技术展览第二天 &amp; 新能源汽车试乘试驾 </td>
+															</tr>
+															<!--被循环的内容部分-->
+															<tr>
+																<td style="background-color: #d5f3f7; padding: 15px; color: #333333; line-height: 40px;">
+																	18:30-20:30
+																	<br> 晚餐会 </td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+												<div class="div-tab" style="display: none;">
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+								<div class="meg">
+								</div>
+
+								<script type="text/javascript">
+									//for循环
+									for(var i=0;i<4;i++){
+										var xx = $("#ccc");
+										var $a=$("<table border='0' cellpadding='0' cellspacing='6' style='font-weight: 900;' width='100%'></table>")
+										var $a2=$("<tbody class='body-in'></tbody>");
+										var $a3=$("<tr></tr>");
+										var $a4=$("<td style='background-color: #f2f2f2; padding: 15px; color: #333333; line-height: 40px;'>时间地点：7月1日，19:00-21:30，亚洲论坛国际会议中心一楼东屿宴会厅B</td>");
+										var $a5=$("<div class='pull-div'></div>");
+										var $a6=$("<div class='pull-tit'>闭门会议：政策制定者、国际组织首脑及全球汽车制造商首脑闭门会 <span data-t='1'></span></div><div data-s='1'class='pull-cont'><p class='line_h'>参会人员（仅限邀请）：<span class='noblod'>国内外政府部门、国际组织、全球汽车制造商首脑等。</span></p></div>");
+										$a.append($a2.append($a3.append($a4.append($a5.append($a6)))));
+										$(".div-tab").append($a);
+									}
+									var a = true;
+									var b = true;
+
+									function xx(xx) {
+										alert(xx)
+										var y = ".pull-tit_" + xx;
+										alert(y)
+										var y1 = ".pull-tit" + xx;
+										alert(y1)
+										var ys = ".pull-tit_" + xx + "s";
+										alert(ys)
+
+										if(a == true) {
+											$(y).css("display", "block");
+											$(ys).removeAttr("style", "");
+											$(y1).find("span").removeClass("span-active");
+											a = false;
+										} else {
+											$(y).css("display", "none");
+											$(ys).css("display", "none");
+											$(y1).find("span").addClass("span-active");
+											a = true;
+										}
+									}
+									$("#title_tab div").click(function() {
+										var index = $(this).index();
+										$(this).addClass("title_tab_active").siblings().removeClass("title_tab_active");
+										$("#content_tab").find(".div-tab").eq(index).show().siblings().hide();
+									});
+									$(".pull-tit").click(function() {
+										var slidekey = $(this).parent().find(".pull-cont").attr("data-s");
+										if(slidekey == 1) {
+											$(this).parent().find(".pull-cont").slideDown("slow");
+											$(this).parent().find(".pull-cont").attr("data-s", "0");
+											$(this).parent().siblings().find(".pull-cont").slideUp();
+											$(this).parent().siblings().find(".pull-cont").attr("data-s", "0");
+											$(this).parent().siblings().find(".pull-tit span").attr("data-t", "0");
+											$(this).parent().siblings().find(".pull-tit span").removeClass("span-active");
+										} else {
+											$(this).parent().find(".pull-cont").slideUp("slow"); /*再次点击添加收起功能*/
+											$(this).parent().find(".pull-cont").attr("data-s", "1");
+										}
+										var spankey = $(this).find("span").attr("data-t");
+										if(spankey == 1) {
+											$(this).find("span").addClass("span-active");
+											$(this).find("span").attr("data-t", "0");
+										} else {
+											$(this).find("span").removeClass("span-active");
+											$(this).find("span").attr("data-t", "1");
+										}
+									})
+								</script>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<!-- page -->
+	</body>
+
+</html>
